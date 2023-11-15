@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: ${{ values.name | dump }}
+  annotations:
+    quay.io/repository-slug: ${{ values.imageOwner }}/${{ values.imageName }}
+spec:
+  type: service
+  owner: user:guest
+  lifecycle: experimental
